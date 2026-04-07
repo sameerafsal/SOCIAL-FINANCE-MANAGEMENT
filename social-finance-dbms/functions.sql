@@ -1,0 +1,17 @@
+DELIMITER //
+
+DROP FUNCTION IF EXISTS total_loan //
+CREATE FUNCTION total_loan(uid INT)
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+READS SQL DATA
+BEGIN
+  DECLARE total DECIMAL(10,2);
+  SELECT COALESCE(SUM(loan_amount), 0)
+  INTO total
+  FROM loans
+  WHERE user_id = uid;
+  RETURN total;
+END //
+
+DELIMITER ;

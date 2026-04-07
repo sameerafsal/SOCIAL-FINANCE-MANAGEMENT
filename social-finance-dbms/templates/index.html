@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Social Finance System</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to right,#1a002e,#3b0066);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+
+background:#2a004d;
+padding:50px;
+border-radius:20px;
+width:400px;
+text-align:center;
+box-shadow:0px 0px 20px rgba(0,0,0,0.6);
+
+}
+
+h1{
+margin-bottom:30px;
+}
+
+input{
+
+width:80%;
+padding:12px;
+margin:10px;
+border:none;
+border-radius:8px;
+
+}
+
+button{
+
+background:#8f33ff;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
+margin-top:15px;
+
+}
+
+button:hover{
+
+background:#a64dff;
+
+}
+
+.dashboard-btn{
+
+display:block;
+margin-top:25px;
+color:white;
+text-decoration:none;
+font-size:16px;
+
+}
+
+.dashboard-btn:hover{
+
+color:#d9b3ff;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💜 Social Finance System</h1>
+
+<h3>Add New User</h3>
+
+<form action="/add_user" method="POST">
+
+<input type="text" name="name" placeholder="Enter Name" required>
+
+<input type="email" name="email" placeholder="Enter Email" required>
+
+<input type="text" name="phone" placeholder="Enter Phone Number" required>
+
+<br>
+
+<button type="submit">
+
+➕ Add User
+
+</button>
+
+</form>
+
+
+<a href="/dashboard" class="dashboard-btn">
+
+📊 Go to Dashboard
+
+</a>
+
+</div>
+
+</body>
+
+</html>

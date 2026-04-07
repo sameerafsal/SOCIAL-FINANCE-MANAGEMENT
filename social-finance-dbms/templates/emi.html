@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>EMI Calculator</title>
+
+<style>
+
+body{
+background:linear-gradient(to right,#1a002e,#3b0066);
+font-family:Arial;
+color:white;
+text-align:center;
+padding-top:80px;
+}
+
+select,button{
+
+padding:12px;
+margin:15px;
+border-radius:8px;
+border:none;
+
+}
+
+button{
+
+background:#8f33ff;
+color:white;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#a64dff;
+
+}
+
+.result{
+
+margin-top:30px;
+font-size:22px;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>⚙ EMI Calculator Panel</h1>
+
+<form method="POST">
+
+<select name="user_id" required>
+
+<option value="">Select User</option>
+
+{% for u in users %}
+
+<option value="{{u.user_id}}">
+
+{{u.user_id}} - {{u.name}}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+<br>
+
+<button type="submit">
+
+Calculate EMI
+
+</button>
+
+</form>
+
+
+{% if emi_result %}
+
+<div class="result">
+
+💰 Monthly EMI = ₹ {{emi_result}}
+
+</div>
+
+{% endif %}
+
+
+<br><br>
+
+<a href="/dashboard" style="color:white;">
+
+⬅ Back to Dashboard
+
+</a>
+
+</body>
+
+</html>

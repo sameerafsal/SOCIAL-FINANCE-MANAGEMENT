@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Finance Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to right,#1a002e,#3b0066);
+color:white;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:100px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#6a00ff;
+padding:40px;
+width:260px;
+text-align:center;
+border-radius:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.1);
+background:#8f33ff;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 align="center">📊 Social Finance Control Panel</h1>
+
+<div class="cards">
+
+<a href="/users">
+
+<div class="card">
+
+<h2>👤 Manage Users</h2>
+
+<h1>{{ total_users }}</h1>
+
+</div>
+
+</a>
+
+
+<a href="/addloan">
+
+<div class="card">
+
+<h2>💳 Add Loan Request</h2>
+
+<h3>Open Form</h3>
+
+</div>
+
+</a>
+
+
+<a href="/transactions">
+
+<div class="card">
+
+<h2>📊 Transactions</h2>
+
+<h3>View Records</h3>
+
+</div>
+
+</a>
+
+
+<a href="/emi">
+
+<div class="card">
+
+<h2>⚙ EMI Calculator</h2>
+
+<h3>Run Engine</h3>
+
+</div>
+
+</a>
+
+
+</div>
+
+</body>
+
+</html>

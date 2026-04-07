@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background:#1a002e;color:white;font-family:Arial">
+
+<h1 align="center">👤 Users Management</h1>
+
+<table border="1" align="center" cellpadding="10">
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Delete</th>
+</tr>
+
+{% for user in data %}
+
+<tr>
+<td>{{ user[0] }}</td>
+<td>{{ user[1] }}</td>
+<td>{{ user[2] }}</td>
+<td>{{ user[3] }}</td>
+
+<td>
+<a href="/delete/{{ user[0] }}">
+❌ Delete
+</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>
